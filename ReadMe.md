@@ -43,6 +43,7 @@ Health checks are not limited to just the application's status. They are crucial
 - The application will be pushed using settings in the provided `manifest.yml` file. The output from the command will show the URL that has been assigned to the application.
 - Edit the manifest file to change the application name to include a unique ID (May be Org Employee ID) to meet Cloud Foundry's requirement for unique app names
 - Use manifest-TAS-6.0.yml to test readiness probes, as readiness probes are only supported from TAS 6.0 and above
+
 ### Deploy in Tanzu
 
 ```bash
@@ -69,8 +70,8 @@ cf push
 - **Value**: `10`
 - **Purpose**: Sets a 10-second limit for the health check response. If the response is not received within this time, the check will be considered failed.
 
-## Readiness Check Configuration
-
+## Readiness Check Configuration - Only works in TAS 5.0 and above
+ 
 ### `readiness-health-check-http-endpoint`
 
 - **Description**: HTTP endpoint for performing readiness checks.
@@ -89,6 +90,10 @@ cf push
 - **Value**: `10`
 - **Purpose**: Sets a 10-second limit for the readiness check response. If the response is not received within this time, the check will be considered failed.
 
+### Testing the end points in Tanzu platform
+```bash
+cf logs healthcheck-demo-12345 --recent
+```
 
 ### Conclusion
 Custom health checks are vital for maintaining the health and reliability of your Spring Boot applications. By following best practices and ensuring comprehensive checks, you can enhance the robustness and resilience of your system.

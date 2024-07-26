@@ -1,0 +1,30 @@
+---
+applications:
+- name: healthcheck-demo-12345
+  env:
+    JBP_CONFIG_OPEN_JDK_JRE: "{ jre: { version: 17.+ } }"
+  buildpacks:
+  - java_buildpack_offline
+  stack: cflinuxfs4
+  routes:
+  - route: healthcheck-demo-12345-restless-wombat-nw.apps.dhaka.cf-app.com
+    protocol: http1
+  processes:
+  - type: task
+    instances: 0
+    memory: 1024M
+    disk_quota: 1024M
+    log-rate-limit-per-second: 16K
+    health-check-type: process
+    readiness-health-check-type: process
+  - type: web
+    instances: 1
+    memory: 1024M
+    disk_quota: 1024M
+    log-rate-limit-per-second: 16K
+    health-check-type: http
+    health-check-http-endpoint: "/actuator/health/liveness"
+    health-check-invocation-timeout: 10
+    readiness-health-check-type: http
+    readiness-health-check-http-endpoint: "/actuator/health/readiness"
+    readiness-health-check-invocation-timeout: 10

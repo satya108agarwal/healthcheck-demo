@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.healthcheck.healthcheck_demo.HealthcheckDemoApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-07-23T19:33:55" hostname="N43VCMF3LX" time="0.462">
+<testsuite name="com.healthcheck.healthcheck_demo.HealthcheckDemoApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-07-26T15:38:37" hostname="N43VCMF3LX" time="0.43">
   <properties/>
-  <testcase name="contextLoads()" classname="com.healthcheck.healthcheck_demo.HealthcheckDemoApplicationTests" time="0.462"/>
-  <system-out><![CDATA[15:33:54.261 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.healthcheck.healthcheck_demo.HealthcheckDemoApplicationTests]: HealthcheckDemoApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-15:33:54.307 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.healthcheck.healthcheck_demo.HealthcheckDemoApplication for test class com.healthcheck.healthcheck_demo.HealthcheckDemoApplicationTests
+  <testcase name="contextLoads()" classname="com.healthcheck.healthcheck_demo.HealthcheckDemoApplicationTests" time="0.43"/>
+  <system-out><![CDATA[11:38:36.510 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.healthcheck.healthcheck_demo.HealthcheckDemoApplicationTests]: HealthcheckDemoApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+11:38:36.558 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.healthcheck.healthcheck_demo.HealthcheckDemoApplication for test class com.healthcheck.healthcheck_demo.HealthcheckDemoApplicationTests
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -14,10 +14,10 @@
 
  :: Spring Boot ::                (v3.3.2)
 
-2024-07-23T15:33:54.474-04:00  INFO 8061 --- [healthcheck-demo] [    Test worker] c.h.h.HealthcheckDemoApplicationTests    : Starting HealthcheckDemoApplicationTests using Java 17.0.9 with PID 8061 (started by satyaagarwal in /Users/satyaagarwal/Downloads/healthcheck-demo)
-2024-07-23T15:33:54.475-04:00  INFO 8061 --- [healthcheck-demo] [    Test worker] c.h.h.HealthcheckDemoApplicationTests    : No active profile set, falling back to 1 default profile: "default"
-2024-07-23T15:33:55.181-04:00  INFO 8061 --- [healthcheck-demo] [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
-2024-07-23T15:33:55.214-04:00  INFO 8061 --- [healthcheck-demo] [    Test worker] c.h.h.HealthcheckDemoApplicationTests    : Started HealthcheckDemoApplicationTests in 0.847 seconds (process running for 1.448)
+2024-07-26T11:38:36.720-04:00  INFO 15700 --- [healthcheck-demo] [    Test worker] c.h.h.HealthcheckDemoApplicationTests    : Starting HealthcheckDemoApplicationTests using Java 17.0.9 with PID 15700 (started by satyaagarwal in /Users/satyaagarwal/Downloads/healthcheck-demo)
+2024-07-26T11:38:36.721-04:00  INFO 15700 --- [healthcheck-demo] [    Test worker] c.h.h.HealthcheckDemoApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2024-07-26T11:38:37.366-04:00  INFO 15700 --- [healthcheck-demo] [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2024-07-26T11:38:37.396-04:00  INFO 15700 --- [healthcheck-demo] [    Test worker] c.h.h.HealthcheckDemoApplicationTests    : Started HealthcheckDemoApplicationTests in 0.785 seconds (process running for 1.288)
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
