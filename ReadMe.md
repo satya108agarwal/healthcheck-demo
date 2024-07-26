@@ -38,6 +38,11 @@ Health checks are not limited to just the application's status. They are crucial
 ```
 
 
+**Note**:
+
+- The application will be pushed using settings in the provided `manifest.yml` file. The output from the command will show the URL that has been assigned to the application.
+- Edit the manifest file to change the application name to include a unique ID (May be Org Employee ID) to meet Cloud Foundry's requirement for unique app names
+- Use manifest-TAS-6.0.yml to test readiness probes, as readiness probes are only supported from TAS 6.0 and above
 ### Deploy in Tanzu
 
 ```bash
