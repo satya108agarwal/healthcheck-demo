@@ -6,6 +6,8 @@ import org.springframework.boot.availability.AvailabilityState;
 import org.springframework.boot.availability.LivenessState;
 import org.springframework.stereotype.Component;
 
+import java.util.Random;
+
 /**
  * CustomLivenessIndicator is a custom implementation of the LivenessStateHealthIndicator.
  * It checks the liveness state of the application to determine if it is healthy and able
@@ -14,6 +16,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class CustomLivenessIndicator extends LivenessStateHealthIndicator {
 
+    private final Random random = new Random();
 
     /**
      * Constructor that initializes the CustomLivenessIndicator with the ApplicationAvailability instance.
@@ -48,10 +51,16 @@ public class CustomLivenessIndicator extends LivenessStateHealthIndicator {
      * @throws InterruptedException if the sleep is interrupted
      */
     private boolean checkLiveness() throws InterruptedException {
-        // Implement your readiness check logic here
-        System.out.println("checking if the application is live to continue to serve traffic. ");
-        Thread.sleep(3000);
-        System.out.println("Slept for 3 seconds ...  to simulate checking if the application is live to continue traffic. ");
-        return true; // Example check
+        System.out.println("Liveness check initiated...");
+
+        // Introduce a random failure 10% of the time
+        if (random.nextInt(10) < 1) {
+            System.err.println("Liveness check failed: Random liveness failure");
+            return false;
+        }
+
+        // Otherwise, consider the application alive
+        System.out.println("Liveness check passed.");
+        return true;
     }
 }

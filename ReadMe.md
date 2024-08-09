@@ -1,10 +1,18 @@
-# Custom Health Checks in Spring Boot
+# Implementing Readiness and Liveness Checks in a Spring Boot Application
 
+# Objective: 
 This project demonstrates how to implement custom liveness and readiness health checks in a Spring Boot application. Health checks are critical for maintaining the reliability and stability of your application, especially in distributed and containerized environments.
+To ensure that an application is fully prepared to handle traffic and to maintain overall health by implementing readiness and liveness checks. We will cover:
+
 
 ## Overview
 
 In a Spring Boot application, health checks are used to monitor the application's health status. They provide insights into whether the application is functioning correctly and can handle traffic. This project implements custom liveness and readiness health checks using Spring Boot's Actuator module.
+
+Warmup: Ensure the application has completed its initialization phase to hydrate the cache.
+Database: Verify that the application can connect to and query the database.
+Cache: Check that the application can access and use the cache.
+Liveness: Ensure that the application container is alive and responsive.
 
 ### Custom Health Checks
 
@@ -94,6 +102,33 @@ cf push
 ```bash
 cf logs healthcheck-demo-12345 --recent
 ```
+
+
+## Recommended Practices
+### Readiness Check:
+
+#### Purpose: 
+To determine if the application is ready to handle requests. This includes checking whether all critical backing services (e.g., databases, caches) are operational.
+
+#### Implementation: 
+This check should validate that the application can successfully connect to and interact with all required services. This includes:
+Database connections.
+External service availability.
+Internal service dependencies.
+
+#### Why: 
+If your application relies on these services to function correctly, it's important that it only starts accepting traffic when all dependencies are fully operational.
+
+### Liveness Check:
+
+#### Purpose:
+ To determine if the container is still running and responsive. This check is typically used to detect if the container is stuck or in a non-recoverable state.
+
+#### Implementation:
+ This check should be simpler and focused on the application's ability to respond. It might not need to validate the health of all backing services but should ensure the application process is alive and responsive.
+
+#### Why:
+This helps Diago brain decide when to restart the container if it becomes unresponsive or encounters a fatal issue that isn't related to the application's dependencies.
 
 ### Conclusion
 Custom health checks are vital for maintaining the health and reliability of your Spring Boot applications. By following best practices and ensuring comprehensive checks, you can enhance the robustness and resilience of your system.
