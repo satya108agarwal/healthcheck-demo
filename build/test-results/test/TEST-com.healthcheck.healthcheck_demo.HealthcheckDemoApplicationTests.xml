@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.healthcheck.healthcheck_demo.HealthcheckDemoApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-08-09T19:28:26" hostname="N43VCMF3LX" time="0.319">
+<testsuite name="com.healthcheck.healthcheck_demo.HealthcheckDemoApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-08-12T22:13:56" hostname="N43VCMF3LX" time="0.303">
   <properties/>
-  <testcase name="contextLoads()" classname="com.healthcheck.healthcheck_demo.HealthcheckDemoApplicationTests" time="0.319"/>
-  <system-out><![CDATA[15:25:23.711 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.healthcheck.healthcheck_demo.HealthcheckDemoApplicationTests]: HealthcheckDemoApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-15:25:23.769 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.healthcheck.healthcheck_demo.HealthcheckDemoApplication for test class com.healthcheck.healthcheck_demo.HealthcheckDemoApplicationTests
+  <testcase name="contextLoads()" classname="com.healthcheck.healthcheck_demo.HealthcheckDemoApplicationTests" time="0.303"/>
+  <system-out><![CDATA[18:13:53.710 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.healthcheck.healthcheck_demo.HealthcheckDemoApplicationTests]: HealthcheckDemoApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+18:13:53.762 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.healthcheck.healthcheck_demo.HealthcheckDemoApplication for test class com.healthcheck.healthcheck_demo.HealthcheckDemoApplicationTests
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -14,32 +14,28 @@
 
  :: Spring Boot ::                (v3.3.2)
 
-2024-08-09T15:25:23.933-04:00  INFO 71403 --- [healthcheck-demo] [    Test worker] c.h.h.HealthcheckDemoApplicationTests    : Starting HealthcheckDemoApplicationTests using Java 17.0.9 with PID 71403 (started by satyaagarwal in /Users/satyaagarwal/Downloads/healthcheck-demo)
-2024-08-09T15:25:23.933-04:00  INFO 71403 --- [healthcheck-demo] [    Test worker] c.h.h.HealthcheckDemoApplicationTests    : No active profile set, falling back to 1 default profile: "default"
-2024-08-09T15:25:24.392-04:00  INFO 71403 --- [healthcheck-demo] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-08-09T15:25:24.393-04:00  INFO 71403 --- [healthcheck-demo] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-08-09T15:25:24.471-04:00  INFO 71403 --- [healthcheck-demo] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 74 ms. Found 1 JPA repository interface.
-2024-08-09T15:25:24.480-04:00  INFO 71403 --- [healthcheck-demo] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-08-09T15:25:24.481-04:00  INFO 71403 --- [healthcheck-demo] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2024-08-09T15:25:24.489-04:00  INFO 71403 --- [healthcheck-demo] [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.healthcheck.healthcheck_demo.H2Repository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-08-09T15:25:24.489-04:00  INFO 71403 --- [healthcheck-demo] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
-2024-08-09T15:25:24.801-04:00  INFO 71403 --- [healthcheck-demo] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-08-09T15:25:24.890-04:00  INFO 71403 --- [healthcheck-demo] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
-2024-08-09T15:25:24.891-04:00  INFO 71403 --- [healthcheck-demo] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-08-09T15:25:24.914-04:00  INFO 71403 --- [healthcheck-demo] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-08-09T15:25:24.935-04:00  INFO 71403 --- [healthcheck-demo] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-08-09T15:25:24.950-04:00  INFO 71403 --- [healthcheck-demo] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-08-09T15:25:25.090-04:00  INFO 71403 --- [healthcheck-demo] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-08-09T15:25:25.481-04:00  INFO 71403 --- [healthcheck-demo] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-08-09T15:25:25.497-04:00  INFO 71403 --- [healthcheck-demo] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-Cache warm-up initiated...
-Cache populated successfully.
-Simulating cache warm-up delay...
-Cache warm-up completed.
-2024-08-09T15:28:25.880-04:00  WARN 71403 --- [healthcheck-demo] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-08-09T15:28:26.407-04:00  INFO 71403 --- [healthcheck-demo] [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
-2024-08-09T15:28:26.442-04:00  INFO 71403 --- [healthcheck-demo] [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2024-08-09T15:28:26.491-04:00  INFO 71403 --- [healthcheck-demo] [    Test worker] c.h.h.HealthcheckDemoApplicationTests    : Started HealthcheckDemoApplicationTests in 182.664 seconds (process running for 183.206)
+2024-08-12T18:13:53.919-04:00  INFO 59293 --- [healthcheck-demo] [    Test worker] c.h.h.HealthcheckDemoApplicationTests    : Starting HealthcheckDemoApplicationTests using Java 17.0.9 with PID 59293 (started by satyaagarwal in /Users/satyaagarwal/Downloads/healthcheck-demo)
+2024-08-12T18:13:53.919-04:00  INFO 59293 --- [healthcheck-demo] [    Test worker] c.h.h.HealthcheckDemoApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2024-08-12T18:13:54.324-04:00  INFO 59293 --- [healthcheck-demo] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-08-12T18:13:54.324-04:00  INFO 59293 --- [healthcheck-demo] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-12T18:13:54.391-04:00  INFO 59293 --- [healthcheck-demo] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 63 ms. Found 1 JPA repository interface.
+2024-08-12T18:13:54.399-04:00  INFO 59293 --- [healthcheck-demo] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-08-12T18:13:54.399-04:00  INFO 59293 --- [healthcheck-demo] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-08-12T18:13:54.408-04:00  INFO 59293 --- [healthcheck-demo] [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.healthcheck.healthcheck_demo.H2Repository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-08-12T18:13:54.408-04:00  INFO 59293 --- [healthcheck-demo] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2024-08-12T18:13:54.688-04:00  INFO 59293 --- [healthcheck-demo] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-08-12T18:13:54.772-04:00  INFO 59293 --- [healthcheck-demo] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2024-08-12T18:13:54.773-04:00  INFO 59293 --- [healthcheck-demo] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-08-12T18:13:54.792-04:00  INFO 59293 --- [healthcheck-demo] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-12T18:13:54.813-04:00  INFO 59293 --- [healthcheck-demo] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-12T18:13:54.826-04:00  INFO 59293 --- [healthcheck-demo] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-12T18:13:54.948-04:00  INFO 59293 --- [healthcheck-demo] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-12T18:13:55.326-04:00  INFO 59293 --- [healthcheck-demo] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-12T18:13:55.342-04:00  INFO 59293 --- [healthcheck-demo] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-12T18:13:55.606-04:00  WARN 59293 --- [healthcheck-demo] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-12T18:13:56.156-04:00  INFO 59293 --- [healthcheck-demo] [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-08-12T18:13:56.180-04:00  INFO 59293 --- [healthcheck-demo] [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2024-08-12T18:13:56.229-04:00  INFO 59293 --- [healthcheck-demo] [    Test worker] c.h.h.HealthcheckDemoApplicationTests    : Started HealthcheckDemoApplicationTests in 2.409 seconds (process running for 2.95)
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

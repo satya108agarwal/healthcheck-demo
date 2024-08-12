@@ -1,5 +1,6 @@
 package com.healthcheck.healthcheck_demo;
 
+import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.actuate.availability.ReadinessStateHealthIndicator;
 import org.springframework.boot.actuate.health.Health;
@@ -7,6 +8,7 @@ import org.springframework.boot.actuate.health.HealthIndicator;
 import org.springframework.boot.availability.ApplicationAvailability;
 import org.springframework.boot.availability.AvailabilityState;
 import org.springframework.boot.availability.ReadinessState;
+import org.springframework.cache.Cache;
 import org.springframework.cache.CacheManager;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
@@ -77,6 +79,7 @@ public class CustomReadinessIndicator extends ReadinessStateHealthIndicator {
         }
 
         try {
+
             // Check H2 Database
             System.out.println("Checking H2 Database...");
             h2Repository.findAll();

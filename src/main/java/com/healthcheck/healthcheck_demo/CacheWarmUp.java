@@ -27,7 +27,7 @@ public class CacheWarmUp {
         // Simulate delay to complete cache warm-up
         try {
             System.out.println("Simulating cache warm-up delay...");
-            Thread.sleep(180000); // Sleep for 3 minutes
+            Thread.sleep(1000); // Sleep for 3 minutes
         } catch (InterruptedException e) {
             System.err.println("Cache warm-up interrupted: " + e.getMessage());
             Thread.currentThread().interrupt();
