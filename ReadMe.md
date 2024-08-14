@@ -9,7 +9,6 @@ To ensure that an application is fully prepared to handle traffic and to maintai
 
 In a Spring Boot application, health checks are used to monitor the application's health status. They provide insights into whether the application is functioning correctly and can handle traffic. This project implements custom liveness and readiness health checks using Spring Boot's Actuator module.
 
-Warmup: Ensure the application has completed its initialization phase to hydrate the cache.
 Database: Verify that the application can connect to and query the database.
 Cache: Check that the application can access and use the cache.
 Liveness: Ensure that the application container is alive and responsive.
